@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="user" method="upgrade">
+	<name>plg_user_phocaemail</name>
+	<author>Joomla! Project</author>
+	<creationDate>January 2008</creationDate>
+	<copyright>(C) 2005 - 2019 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>admin@joomla.org</authorEmail>
+	<authorUrl>www.joomla.org</authorUrl>
+	<version>3.0.0</version>
+	<description>PLG_USER_PHOCAEMAIL_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="phocaemail">phocaemail.php</filename>
+		<folder>phocaemail</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_user_phocaemail.ini</language>
+		<language tag="en-GB">en-GB.plg_user_phocaemail.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_content/models/fields">
+				<field
+					name="register-phocaemail_user"
+					type="spacer"
+					label="PLG_USER_PHOCAEMAIL_CONFIGURACION_SUBSCRIPCION"
+					class="text"
+				/>
+
+				<field
+					name="register-phocaemail_subcripcion"
+					type="list"
+					label="PLG_USER_PHOCAEMAIL_FIELD_SUBCRIPCION_LABEL"
+					description="PLG_USER_PHOCAEMAIL_FIELD_SUBCRIPCION_DESC"
+					default="1"
+					filter="integer"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field
+					name="register-phocaemail_listas_subcripcion"
+					type="list"
+					label="PLG_USER_PHOCAEMAIL_FIELD_LISTA_SUBCRIPCION_LABEL"
+					description="PLG_USER_PHOCAEMAIL_FIELD_LISTA_SUBCRIPCION_DESC"
+					default="1"
+					filter="integer"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				
+			</fieldset>
+		</fields>
+	</config>
+</extension>
