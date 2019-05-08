@@ -4,15 +4,19 @@
 		<fieldset
 			name="phocaemail"
 			label="PLG_USER_PHOCAEMAIL_TEXTO_SEPARADOR_SUBCRIPCION_LABEL"
-        >
+                >
 			<field
 				name="suscripcion"
-				type="checkbox"
+				type="list"
+                                required="true"
 				label="PLG_USER_PHOCAEMAIL_FIELD_SUBCRIPCION_LABEL"
 				description="PLG_USER_PHOCAEMAIL_FIELD_SUBCRIPCION_DESC"
-				id="address1"
-                default="0"
-			/>
+				id="active"
+                default="1"
+                        >
+                            <option value="1">aceptada</option>
+                            <option value="2">Cancelada</option>                            
+                        </field>
         </fieldset>
 	</fields>
 </form>
