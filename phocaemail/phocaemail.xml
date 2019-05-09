@@ -12,7 +12,7 @@
 				label="PLG_USER_PHOCAEMAIL_FIELD_SUBCRIPCION_LABEL"
 				description="PLG_USER_PHOCAEMAIL_FIELD_SUBCRIPCION_DESC"
 				id="active"
-                default="1"
+                                default="1"
                         >
                             <option value="1">aceptada</option>
                             <option value="2">Cancelada</option>                            

@@ -238,7 +238,7 @@ class PlgUserPhocaemail extends JPlugin
         return $results;
     }
 
-    public function UpdateUsuarioJoomlaNews($userid,$id){
+    public function UpdateUsuarioJoomlaNews($userid,$id,$active){
         // Añadimos usuario de joomla en el registro newsletter.
         $db = Factory::getDbo();
         $query = "UPDATE #__phocaemail_subscribers SET userid=" . $userid . ", active=" . $active . ",date_register=NOW()";
