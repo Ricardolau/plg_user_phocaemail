@@ -12,10 +12,12 @@
 	<files>
 		<filename plugin="phocaemail">phocaemail.php</filename>
 		<folder>phocaemail</folder>
+        <folder>languages</folder>
+
 	</files>
 	<languages>
-		<language tag="en-GB">en-GB.plg_user_phocaemail.ini</language>
-		<language tag="en-GB">en-GB.plg_user_phocaemail.sys.ini</language>
+		<language tag="en-GB">languages/en-GB.plg_user_phocaemail.ini</language>
+		<language tag="en-GB">languages/en-GB.plg_user_phocaemail.sys.ini</language>
 	</languages>
 	<config>
 		<fields name="params">
