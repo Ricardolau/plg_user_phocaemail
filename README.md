@@ -6,3 +6,6 @@ Con esté plugin:
 - Al editar perfil permite cancelar o aceptar la suscrición.
 
 El plugin podemos poner por defecto  Si acepta o No.
+
+## Pendiente
+Poder mostrar las listas de newsletter que tengamos creadas en com_phocaemail, para poder selecionar en la que estamos subcriptos.
