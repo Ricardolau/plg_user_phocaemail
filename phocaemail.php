@@ -167,8 +167,12 @@ class PlgUserPhocaemail extends JPlugin
                 // Hubo un resultado 
                 $id = intval($r['0']->id);
                 if ($id > 0 ){
-                    // Si existe email en subscripcion, añadimos usuario de Joomla creado y si esta o no subcripto.
-                    $r2= $this->UpdateUsuarioJoomlaNews($userId,$id,$data['phocaemail']['suscripcion']);
+                    // Comprobamos que tengamos valor suscripcion ya otras extensiones que utilizan registro y
+                    // puede que no carguen el valor phocaemail.
+                    if (isset($data['phocaemail']['suscripcion'])){
+                        // Si existe email en subscripcion, añadimos usuario de Joomla creado y si esta o no subcripto.
+                        $r2= $this->UpdateUsuarioJoomlaNews($userId,$id,$data['phocaemail']['suscripcion']);
+                    }
                     // devuelve boreano.. true correcto
                 }
             }
