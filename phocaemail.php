@@ -158,7 +158,7 @@ class PlgUserPhocaemail extends JPlugin
     public function onUserAfterSave($data, $isNew, $result, $error)
     {
         $userId = ArrayHelper::getValue($data, 'id', 0, 'int');
-		if ($userId && $result )
+        if ($userId && $result )
 		{
             // Compruebo si existe email.
             $r = $this->SiexisteSubcripcion($data['email'],'email');
@@ -177,9 +177,13 @@ class PlgUserPhocaemail extends JPlugin
                 }
             }
             if (count($r) === 0){
-
                 // No existe email en subscripcion, añadimos registro con los datos usuario creado.
                 $r3= $this->InsertarUsuarioJoomlaNews($userId,$data['email'],$data['name']);
+                // Si suscripcion fue cancelada a la hora registrarse, entonces la cancelo.
+                $id= $r3['id_nuevo'];
+                if ($data['phocaemail']['suscripcion'] === "2" && $id > 0){
+                    $r2= $this->UpdateUsuarioJoomlaNews($userId,$id,$data['phocaemail']['suscripcion']);
+                }
             }
         }
         return true;
@@ -287,7 +291,7 @@ class PlgUserPhocaemail extends JPlugin
         $db->execute();
         $num_rows = $db->getAffectedRows();
         $respuesta['Anhadidos'] = $num_rows;
-
+        $respuesta['id_nuevo'] =$db->insertid();
         return $respuesta;
     }
 }
